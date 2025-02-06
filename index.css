@@ -1,0 +1,36 @@
+
+      body{
+        background-color: rgb(104, 159, 104);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+      }
+      form{
+        width: 300px;
+      }
+
+      input{
+        border: none;
+      }
+
+      input, button{
+        padding: 10px;
+        width: -webkit-fill-available;
+      }
+
+      button{
+        cursor:pointer;
+        width: -webkit-fill-avaiable;
+        margin-bottom: 10px;
+      }
+      button:active{
+        opacity: 0.8;
+      }
+
+      .form-field{
+        margin-bottom: 10px;
+      }
+
+      

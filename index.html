@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Login - Controle de gastos</title>
+</head>
+
+<body>
+    <form>
+         <div class="form-field">
+             <div><label>Email</label></div>
+             <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com"/>
+            <div class="error" id="email-required-error"> Email é obrigatorio</div>
+            <div class="error"id = "email-invalid-error">Email é invalido</div>
+            </div>   
+        <div class="form-field">
+           <div><label>Senha</label></div>
+           <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="senha"/>
+        <div class="error" id="password-required-error">Senha é obrigatoria</div>
+        </div>   
+        <DIV>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+        </DIV>
+        <DIV>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </DIV>
+        <DIV>
+        <button type="button" class="outline" onclick="register()">Registrar</button>
+    </DIV>
+    </form>
+</body>
+
+<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="global.css" />
+
+<script src="index.js"></script>
+<script src="validations.js"></script>
+<script>src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"</script>
+<script>src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth-compat.js"</script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCjGzjd8uBEg2MNZJH1Y92ncPM90EI2hhU",
+        authDomain: "controle-de-gastos-f6bcc.firebaseapp.com",
+        projectId: "controle-de-gastos-f6bcc",
+        storageBucket: "controle-de-gastos-f6bcc.firebasestorage.app",
+        messagingSenderId: "982847636899",
+        appId: "1:982847636899:web:69e0ae7955966471d18616"
+    };
+    
+  firebase.initializeApp(firebaseConfig);
+
+  firebase.auth().signInWithEmailPassword("dusgudad@gmail.com", "123456");
+
+  
+  
+
+</script>
+
+</html>
